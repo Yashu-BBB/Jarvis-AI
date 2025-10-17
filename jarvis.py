@@ -5,6 +5,7 @@ import webbrowser
 import time
 import threading
 from datetime import datetime
+import sys
 
 try:
     import speech_recognition as sr
@@ -372,3 +373,16 @@ if __name__ == "__main__":
     except Exception as e:
         print("[Jarvis] Unexpected error:", e)
         raise
+
+def update_from_github():
+    """Pull latest updates from GitHub."""
+    try:
+        speak("Checking for updates from GitHub.", block=True)
+        result = subprocess.run(["git", "pull", "origin", "main"], capture_output=True, text=True)
+        if "Already up to date" in result.stdout:
+            speak("No updates found. I am already up to date.")
+        else:
+            speak("Update complete. Restarting myself.")
+            os.execv(sys.executable, ['python'] + sys.argv)
+    except Exception as e:
+        speak(f"Failed to update: {e}")
