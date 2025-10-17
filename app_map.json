@@ -1,0 +1,9 @@
+{
+  "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "notepad": "notepad.exe",
+  "vscode": "C:\\Users\\User\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+  "calculator": "calc.exe",
+  "edge": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "explorer": "explorer.exe",
+  "python": "C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python39-32\\python.exe"
+}
